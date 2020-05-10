@@ -1,0 +1,50 @@
+#register-form {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    padding-top: 20vh;
+    color:rgb(245, 123, 9);
+}
+
+.login {
+    width: 40%;
+}
+.delete-form {
+    display: inline;
+}
+.rejestracja{
+    text-align: center;
+    padding-bottom: 20px;
+    font-weight: 900;
+    color: rgb(245, 123, 9);
+}
+.strona-glowna{
+    text-align: center;
+    color: rgb(245, 123, 9);
+    font-weight: 900;
+}
+body{
+    background: #3CA55C;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #B5AC49, #3CA55C);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #B5AC49, #3CA55C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.bg{
+    background-color: ivory opacity 0;
+}
+#index-container {
+    padding-top: 1%;
+    padding-bottom: 5%;
+    background-color: transparent;
+    border: none;
+}
+#index-header {
+    background: #acb6e5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #86fde8, #acb6e5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #86fde8, #acb6e5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.index-border {
+    box-shadow: 0 0 10px white;
+}
+.index-hover:hover {
+    box-shadow: 0 0 10px gold;
+}

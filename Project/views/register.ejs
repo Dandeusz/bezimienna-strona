@@ -1,0 +1,24 @@
+<%- include("./partials/header") %>
+
+
+
+<form id="register-form" action="/register" method="POST">
+    <div class="container login">
+        <h1 class="rejestracja display-1"><strong>Rejestracja</strong></h1>
+        <div class="form-group">
+            <input class="form-control" type="text" name="username" placeholder="Nazwa użytkownika">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="Hasło">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" name="passwordConfirm" placeholder="Potwierdź Hasło">
+        </div>
+        <button type="submit" class="btn btn-lg btn-default btn-block btn-primary">Zarejestruj</button>
+    </div>
+
+</form>
+
+
+<%- include("./partials/footer") %>
+
