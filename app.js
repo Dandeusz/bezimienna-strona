@@ -13,7 +13,7 @@ var express         = require("express"),
 
  var url = process.env.DATABASEURL || "mongodb://localhost/kwiaty"
 // // mongoose.connect(url, {
-mongoose.connect("mongodb+srv://dandeusz:o45pZ6QLxnV0aNKw@cluster0-3t3pj.mongodb.net/test?retryWrites=true&w=majority", {
+mongoose.connect("mongodb+srv://dandeusz:yUk3XQxq-jfBJuh@cluster0-3t3pj.mongodb.net/test?retryWrites=true&w=majority", {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useCreateIndex: true
