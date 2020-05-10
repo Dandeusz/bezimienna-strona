@@ -7,13 +7,11 @@ var express         = require("express"),
     flash           = require("connect-flash"),
     LocalStrategy   = require("passport-local"),
     User            = require("./models/user")
-    Comment         = require("./models/Comment"), 
-    seedDB          = require("./models/seeds"),
     methodOverride  = require("method-override");
 
 // ==================================================================
 
-// var url = process.env.DATABASEURL || "mongodb://localhost/kwiaty"
+ var url = process.env.DATABASEURL || "mongodb://localhost/kwiaty"
 // // mongoose.connect(url, {
 mongoose.connect("mongodb+srv://dandeusz:o45pZ6QLxnV0aNKw@cluster0-3t3pj.mongodb.net/test?retryWrites=true&w=majority", {
     useUnifiedTopology: true,
@@ -44,7 +42,9 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 // AUTH ROUTES ======================================================
-//
+const    authRoutes      = require("./routes/index");
+         indexRoutes     = require("./routes/routes");
+
 // ==================================================================
 app.use(function(req,res,next){
     res.locals.currentUser = req.user;
@@ -54,8 +54,7 @@ app.use(function(req,res,next){
 });
 // ==================================================================
 app.use(authRoutes);
-app.use(kwiatyRoutes);
-app.use("/kwiaty/:id/comments", commentRoutes);
+app.use(indexRoutes);
 // ==================================================================
 function isLoggedIn(req,res,next){
     if(req.isAuthenticated()){
