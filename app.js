@@ -44,6 +44,7 @@ passport.deserializeUser(User.deserializeUser());
 // AUTH ROUTES ======================================================
 const    authRoutes      = require("./routes/index");
          indexRoutes     = require("./routes/routes");
+         appRoutes     = require("./routes/appRoutes");
 
 // ==================================================================
 app.use(function(req,res,next){
@@ -55,6 +56,7 @@ app.use(function(req,res,next){
 // ==================================================================
 app.use(authRoutes);
 app.use(indexRoutes);
+app.use(appRoutes);
 // ==================================================================
 function isLoggedIn(req,res,next){
     if(req.isAuthenticated()){
